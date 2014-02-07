@@ -4,6 +4,21 @@
 
 object extensions for underscore
 
+```bash
+$ npm install underscore-obj
+```
+
+```javascript
+var _ = require("underscore-obj");
+```
+
+or
+
+```javascript
+var _ = require("underscore");
+require("underscore-obj");
+```
+
 ## Extensions for Object
 ### valueForKeyPath(obj, keyPath, fallbackValue)
 ```javascript
