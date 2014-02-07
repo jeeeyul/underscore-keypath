@@ -31,10 +31,12 @@ $ npm install underscore underscore-keypath
 var foo = {
   bar : {
     name : "Cool!"
-  }
+  },
+  scores : [55, 27, 100, 33]
 };
 
 _(foo).valueForKeyPath("bar.name"); // --> "Cool!"
+_(foo).valueForKeyPath("scores.@max"); // --> 100
 ```
 
 see [API Document](https://github.com/jeeeyul/underscore-keypath/wiki)
