@@ -6,18 +6,22 @@ var arr = [
 	{
 		"entry" : {
 			"name" : "a",
-			"tag" : "foo"
+			"tag" : "foo",
+			"age" : 1,
+			"data" : [1, 3, 5, 7, 9]
 		}
 	},
 	{
 		"entry" : {
-			"name" : "b"
+			"name" : "b",
+			"age" : 2
 		}
 	},
 	{
 		"entry" : {
 			"name" : "c",
-			"tag" : "foo"
+			"tag" : "foo",
+			"age" : 3
 		}
 	}
 ];
@@ -49,4 +53,32 @@ describe("whereByKeyPath", function(){
 		}).entry.name.should.be.exactly("c");
 	});
 
+});
+
+
+describe("@property", function(){
+	it("@first should have to return first element", function(){
+		_(arr).valueForKeyPath("@first.entry.name").should.be.exactly("a");
+	});
+
+	it("@last should have to return last element", function(){
+		_(arr).valueForKeyPath("@last.entry.name").should.be.exactly("c");
+	});
+
+	it("@max should have to return max value of list", function(){
+		_.chain(arr)
+			.pluckByKeyPath("entry.age")
+			.max()
+			.value().should.be.exactly(3);
+
+		_(arr).valueForKeyPath("@first.entry.data.@max").should.be.exactly(9);
+	});
+
+	it("@min should have to return min value of list", function(){
+		_(arr).valueForKeyPath("@first.entry.data.@min").should.be.exactly(1);
+	});
+
+	it("@size should have to return size of list", function(){
+		_(arr).valueForKeyPath("@size").should.be.exactly(3);
+	});
 });
