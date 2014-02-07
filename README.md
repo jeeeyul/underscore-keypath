@@ -43,7 +43,7 @@ _(obj).valueForKeyPath("foo.valid"); // --> true
 Do you really need description for this function? Really?
 
 ## pluckByKeyPath(list, keyPath)
-```javascrit
+```javascript
 var list = [
   {
     foo : {
