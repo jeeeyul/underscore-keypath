@@ -11,8 +11,8 @@ var fixture = {
 describe("setValueForKeyPath", function(){
 	describe("set plain property", function(){
 		it("plain property must be updated", function(){
-			_(fixture).setValueForKeyPath("foo.name", "FOO");
-			fixture.foo._name.should.be.exactly("FOO");
+			_(fixture).setValueForKeyPath("foo.alias", "FOO");
+			fixture.foo.alias.should.be.exactly("FOO");
 		});
 	});
 
