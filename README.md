@@ -24,4 +24,4 @@ in this case, please install "underscore" first.
 $ npm install underscore underscore-obj
 ```
 
-see [API](wiki/API) Document
+see [API](https://github.com/jeeeyul/underscore-obj/wiki/API) Document
