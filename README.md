@@ -36,8 +36,12 @@ var foo = {
 };
 
 _(foo).valueForKeyPath("bar.name"); // --> "Cool!"
+_(foo).setValueForKeyPath("bar.name", "BAR"); // --> sets foo.bar.name as "BAR"
 _(foo).valueForKeyPath("scores.@max"); // --> 100
+```
 
+## more?
+```javascript
 var list = [{
   name : "foo",
   info : {
