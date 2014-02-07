@@ -7,7 +7,7 @@
 
 	"description" : "Adds Key-Path mechanism extensions for underscore",
 	
-	"main" : "./lib/underscore-keypath",
+	"main" : "./lib/underscore-keypath.min.js",
 
 	"repository" : {
 		"type" : "git",
@@ -29,7 +29,7 @@
 	},
 
 	"scripts" : {
-		"postinstall" : "uglifyjs lib/underscore-keypath.js -o lib/underscore-keypath.min.js -m",
+		"minify" : "uglifyjs lib/underscore-keypath.js -o lib/underscore-keypath.min.js --source-map lib/underscore-keypath.min.js.map -m",
 		"test" : "mocha -R spec"
 	}
 }
