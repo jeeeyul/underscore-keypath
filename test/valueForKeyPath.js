@@ -1,4 +1,4 @@
-var _ = require("../lib/underscore-obj");
+var _ = require("../lib/underscore-keypath");
 var assert = require("assert");
 
 var foo = {
