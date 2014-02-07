@@ -8,8 +8,7 @@ object extensions for underscore
 $ npm install underscore-obj
 ```
 
-
-
+How to use:
 ```javascript
 var _ = require("underscore-obj");
 ```
