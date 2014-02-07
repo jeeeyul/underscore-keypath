@@ -61,5 +61,14 @@ describe("valueForKeyPath", function(){
 		});
 	});
 
+	describe("plain property", function(){
+		it("valueForKeyPath returns value of given keypath", function(){
+			_(foo).valueForKeyPath("bar.name").should.be.exactly("bar");
+		});
+		
+		it("getValueForKeyPath must be act same as valueForKeyPath", function(){
+			_(foo).getValueForKeyPath("bar.name").should.be.exactly("bar");
+		});
+	});
 });
 
