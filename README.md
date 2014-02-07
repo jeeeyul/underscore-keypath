@@ -59,3 +59,6 @@ var list = [
 
 _(list).pluckByKeyPath("foo.bar"); // --> ["first", "second"]
 ```
+
+### whereByKeyPath(list, query)
+### findWhereByKeyPath(list, query)
