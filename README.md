@@ -15,7 +15,6 @@ var obj = {
 };
 
 _(obj).valueForKeyPath("foo.bar"); // --> "test"
-
 _(obj).valueForKeyPath("foo.notExistingProperty", "fallback"); // --> "fallback"
 ```
 
@@ -40,3 +39,6 @@ var obj = {
 _(obj).valueForKeyPath("foo.name"); // --> "Hello"
 _(obj).valueForKeyPath("foo.valid"); // --> true
 ```
+
+## setValueForKeyPath(obj, keyPath, newValue)
+Do you really need description for this function? Really?
