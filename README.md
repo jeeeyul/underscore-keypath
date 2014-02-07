@@ -41,3 +41,21 @@ _(obj).valueForKeyPath("foo.valid"); // --> true
 
 ## setValueForKeyPath(obj, keyPath, newValue)
 Do you really need description for this function? Really?
+
+## pluckByKeyPath(list, keyPath)
+```javascrit
+var list = [
+  {
+    foo : {
+      bar : "first"
+    }
+  },
+  {
+    foo : {
+      bar : "second"
+    }
+  }
+];
+
+_(list).pluckByKeyPath("foo.bar"); // --> ["first", "second"]
+```
