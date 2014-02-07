@@ -17,7 +17,7 @@ or you may want to use origianl underscore:
 
 ```javascript
 var _ = require("underscore");
-require("underscore-obj");
+require("underscore-obj"); // it will extend original underscore
 ```
 in this case, please install "underscore" first.
 ```bash
