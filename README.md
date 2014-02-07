@@ -18,7 +18,6 @@ _(obj).valueForKeyPath("foo.bar"); // --> "test"
 _(obj).valueForKeyPath("foo.notExistingProperty", "fallback"); // --> "fallback"
 ```
 
-### getter
 What if there is a getter for given keypath, underscore-obj tries to use it.
 ```javascript
 var obj = {
