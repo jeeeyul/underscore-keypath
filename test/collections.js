@@ -9,6 +9,14 @@ var fixture = [
 	new Person("zar", 3)
 ];
 
+fixture[0].company = {
+	name : "nodejs"
+};
+
+fixture[2].company = {
+	name : "nodejs"
+};
+
 describe("collection", function(){
 	describe("pluckByKeyPath", function(){
 		it("pluckByKeyPath should have to pluck by keypath mechanism", function(){
@@ -24,10 +32,11 @@ describe("collection", function(){
 	describe("whereByKeyPath", function(){
 		it("whereByKeyPath should act as where with key-value mechanism", function(){
 			_(fixture).whereByKeyPath({
-				"age" : 2
+				"company.name" : "nodejs"
 			}).should.be.an.Array
-				.and.containEql(fixture[1])
-				.and.have.lengthOf(1);
+				.and.containEql(fixture[0])
+				.and.containEql(fixture[2])
+				.and.have.lengthOf(2);
 		});
 
 		it("findWhere should act as _.findWhere with key-value mechanism", function(){
