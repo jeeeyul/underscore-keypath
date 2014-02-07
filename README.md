@@ -20,7 +20,7 @@ object extensions for underscore
 ### getter
 What if there is a getter for given keypath, underscore-obj tries to use it.
 
-var obj = {
+    var obj = {
       foo : {
         _name : "Hello",
         _valid : true,
