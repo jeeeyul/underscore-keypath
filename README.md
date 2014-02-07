@@ -1,6 +1,6 @@
 # underscore-obj
 
-[![Build Status](https://travis-ci.org/jeeeyul/underscore-obj.png?branch=master)](https://travis-ci.org/jeeeyul/underscore-obj)
+[![Build Status](https://travis-ci.org/jeeeyul/underscore-keypath.png?branch=master)](https://travis-ci.org/jeeeyul/underscore-keypath)
 
 object extensions for underscore
 
