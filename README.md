@@ -37,6 +37,31 @@ var foo = {
 
 _(foo).valueForKeyPath("bar.name"); // --> "Cool!"
 _(foo).valueForKeyPath("scores.@max"); // --> 100
+
+var list = [{
+  name : "foo",
+  info : {
+    favoriteColor : "red",
+    age : 20
+  }
+},{
+  name : "bar",
+  info : {
+    favoriteColor : "green",
+    age : 17
+  }
+},{
+  name : "zar",
+  info : {
+    favoriteColor : "red",
+    age : 34
+  }
+}];
+
+_(list).pluckByKeyPath("info.age"); // --> [20, 17, 34]
+_(list).sortByKeyPath("info.age"); // --> [{name:"bar", ..}, {name:"foo", ..}, {name:"zar", ..}]
+_(list).groupByKeyPath("info.favoriteColor"); // --> {red:2, green:1}
+
 ```
 
 see [API Document](https://github.com/jeeeyul/underscore-keypath/wiki)
