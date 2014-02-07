@@ -24,4 +24,15 @@ in this case, please install "underscore" first.
 $ npm install underscore underscore-obj
 ```
 
+## example
+```javascript
+var foo = {
+  bar : {
+    name : "Cool!"
+  }
+};
+
+_(foo).valueForKeyPath("bar.name"); // --> "Cool!"
+```
+
 see [API](https://github.com/jeeeyul/underscore-obj/wiki/API) Document
