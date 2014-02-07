@@ -5,13 +5,13 @@
 	
 	"author" : "Jeeeyul Lee <jeeeyul@gmail.com>",
 
-	"description" : "Adds object extensions for underscore",
+	"description" : "Adds Key-Path mechanism extensions for underscore",
 	
-	"main" : "./lib/underscore-obj",
+	"main" : "./lib/underscore-keypath",
 
 	"repository" : {
 		"type" : "git",
-		"url" : "https://github.com/jeeeyul/underscore-obj.git"
+		"url" : "https://github.com/jeeeyul/underscore-keypath.git"
 	},
 
 	"keywords" : [
