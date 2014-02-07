@@ -1,74 +1,60 @@
 var _ = require("../lib/underscore-keypath");
 var assert = require("assert");
+var Person = require("./fixture").Person;
 
-var foo = {
-	"_version" : "0.0.1",
-	"_valid" : true,
-	"getVersion" : function(){
-		return this._version;
-	},
-	"isValid" : function(){
-		return this._valid;
-	},
+var fixture = {
+	foo : new Person("aaa", 1),
+	bar : new Person("bar", 2)
+};
 
-	"name" : "foo",
-	"bar" : {
-		"name" : "bar",
-		"fnProp" : function(){
-			return {
-				name : "fnProp"
-			}
-		}
-	}
-}
+fixture.foo.data = "sample data";
+fixture.count = function(){
+	return 2; 
+};
 
 describe("valueForKeyPath", function(){
 	describe("empty-keypath", function(){
 		it("what if keypath is empty, result must be current context", function(){
-			assert.equal(
-				_(foo).valueForKeyPath(""),
-				foo
-			);
+			_(fixture).valueForKeyPath("").should.be.exactly(fixture);
 		});
 	});
 
 	describe("fallback", function(){
 		it("should return fallback value when there is no value for give keypath", function(){
-			assert.equal(_(foo).valueForKeyPath("bar.nonexistproperty", "fallback"), "fallback");
+			_(fixture).valueForKeyPath("zar.whatever", "fallback")
+				.should.be.exactly("fallback");
 		});
 	});
 
 	describe("function", function(){
 		it("what if property is function, it's result have to be returned.", function(){
-			assert.equal(
-				_(foo).valueForKeyPath("bar.fnProp.name"),
-				"fnProp"
-			);
+			_(fixture).valueForKeyPath("count").should.be.exactly(2);
 		});
 	});
 
 	describe("getter", function(){
 		it("what if there is a getter for given key, it must be call", function(){
-			assert.equal(
-				_(foo).valueForKeyPath("version"),
-				"0.0.1"
-			);
+			_(fixture).valueForKeyPath("foo.name")
+				.should.be.exactly(fixture.foo._name);
 
-			assert.equal(
-				_(foo).valueForKeyPath("valid"),
-				true
-			);
+			_(fixture).valueForKeyPath("foo.male")
+				.should.be.exactly(fixture.foo._male);
 		});
 	});
 
 	describe("plain property", function(){
 		it("valueForKeyPath returns value of given keypath", function(){
-			_(foo).valueForKeyPath("bar.name").should.be.exactly("bar");
-		});
-		
+			_(fixture).valueForKeyPath("foo.data")
+				.should.be.exactly("sample data");
+		});	
+	});
+
+	describe("alias", function(){
 		it("getValueForKeyPath must be act same as valueForKeyPath", function(){
-			_(foo).getValueForKeyPath("bar.name").should.be.exactly("bar");
+			_(fixture).getValueForKeyPath("foo.data")
+				.should.be.exactly("sample data");
 		});
+
 	});
 });
 

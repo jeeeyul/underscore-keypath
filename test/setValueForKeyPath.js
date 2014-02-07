@@ -1,42 +1,27 @@
 var _ = require("../lib/underscore-keypath");
 var assert = require("assert");
+var should = require("should");
+var Person = require("./fixture.js").Person;
 
-var foo = {
-	"_version" : "0.0.1",
-	"getVersion" : function(){
-		return this._version;
-	},
-	"setVersion" : function(newVersion){
-		this._version = newVersion;
-	},
+var fixture = {
+	foo : new Person("foo", 1),
+	bar : new Person("bar", 2)
+};
 
-	"bar" : {
-		"_name" : "bar",
-		"setName" : function(newName){
-			return this._name = newName;
-		},
-		"getName" : function(){
-			return this._name;
-		}
-	}
-}
+describe("setValueForKeyPath", function(){
+	describe("set plain property", function(){
+		it("plain property must be updated", function(){
+			_(fixture).setValueForKeyPath("foo.name", "FOO");
+			fixture.foo._name.should.be.exactly("FOO");
+		});
+	});
 
-describe("set plain property", function(){
-	it("plain property must be updated", function(){
-		_(foo).setValueForKeyPath("aProp", 1024);
-		assert.equal(foo.aProp, 1024);
-
-		_(foo).setValueForKeyPath("bar.bProp", 1111);
-		assert.equal(foo.bar.bProp, 1111);
+	describe("set property by setter", function(){
+		it("what if there is setter for given keypath, it must be called", function(){
+			_(fixture).setValueForKeyPath("bar.age", 99);
+			fixture.bar._age.should.be.exactly(99);
+		});
 	});
 });
 
-describe("set property by setter", function(){
-	it("what if there is setter for given keypath, it must be called", function(){
-		_(foo).setValueForKeyPath("version", "9.9.9");
-		assert.equal(foo._version, "9.9.9");
 
-		_(foo).setValueForKeyPath("bar.name", "nodejs");
-		assert.equal(foo.bar._name, "nodejs");
-	});
-});
