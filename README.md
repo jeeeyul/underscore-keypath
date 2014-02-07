@@ -2,7 +2,9 @@
 
 [![Build Status](https://travis-ci.org/jeeeyul/underscore-keypath.png?branch=master)](https://travis-ci.org/jeeeyul/underscore-keypath)
 
-key-path mechanism extensions for underscore
+key-path mechanism extensions for underscore.
+
+**underscore-keypath** let you access JavaScript objects and arrays with keypath easily.
 
 ```bash
 $ npm install underscore-keypath
