@@ -23,3 +23,5 @@ in this case, please install "underscore" first.
 ```bash
 $ npm install underscore underscore-obj
 ```
+
+see [API](wiki/API) Document
