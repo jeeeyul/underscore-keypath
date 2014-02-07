@@ -1,7 +1,10 @@
-function Person(name, age){
+var _ = require("underscore");
+
+function Person(name, age, options){
 	this._name = name;
 	this._age = age;
 	this._male = true;
+	this.options = _.extend({}, options);
 };
 
 Person.prototype.getName = function(){
