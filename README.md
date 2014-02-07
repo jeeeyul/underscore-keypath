@@ -1,16 +1,16 @@
-# underscore-obj
+# underscore-keypath
 
 [![Build Status](https://travis-ci.org/jeeeyul/underscore-keypath.png?branch=master)](https://travis-ci.org/jeeeyul/underscore-keypath)
 
-object extensions for underscore
+key-path mechanism extensions for underscore
 
 ```bash
-$ npm install underscore-obj
+$ npm install underscore-keypath
 ```
 
 ## How to use
 ```javascript
-var _ = require("underscore-obj");
+var _ = require("underscore-keypath");
 ```
 
 or you may want to use origianl underscore:
