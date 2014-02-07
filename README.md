@@ -4,9 +4,8 @@
 
 object extensions for underscore
 
-## API
-
-## valueForKeyPath(obj, keyPath, fallbackValue)
+## Extensions for Object
+### valueForKeyPath(obj, keyPath, fallbackValue)
 ```javascript
 var obj = {
   foo : {
@@ -39,10 +38,11 @@ _(obj).valueForKeyPath("foo.name"); // --> "Hello"
 _(obj).valueForKeyPath("foo.valid"); // --> true
 ```
 
-## setValueForKeyPath(obj, keyPath, newValue)
+### setValueForKeyPath(obj, keyPath, newValue)
 Do you really need description for this function? Really?
 
-## pluckByKeyPath(list, keyPath)
+## Extensions for collection
+### pluckByKeyPath(list, keyPath)
 ```javascript
 var list = [
   {
