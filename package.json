@@ -28,6 +28,7 @@
 	},
 
 	"scripts" : {
+		"postinstall" : "uglifyjs lib/underscore-keypath.js -o lib/underscore-keypath.min.js -m",
 		"test" : "mocha -R spec"
 	}
 }
