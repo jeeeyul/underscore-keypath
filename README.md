@@ -68,4 +68,4 @@ _(list).groupByKeyPath("info.favoriteColor"); // --> {red:2, green:1}
 
 ```
 
-see [API Document](https://github.com/jeeeyul/underscore-keypath/wiki)
+See [API Document](https://github.com/jeeeyul/underscore-keypath/wiki)
