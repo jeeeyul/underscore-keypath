@@ -17,11 +17,11 @@ or you may want to use origianl underscore:
 
 ```javascript
 var _ = require("underscore");
-require("underscore-obj"); // it will extend original underscore
+require("underscore-keypath"); // it will extend original underscore
 ```
 in this case, please install "underscore" first.
 ```bash
-$ npm install underscore underscore-obj
+$ npm install underscore underscore-keypath
 ```
 
 ## example
