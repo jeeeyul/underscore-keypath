@@ -35,9 +35,9 @@ var foo = {
   scores : [55, 27, 100, 33]
 };
 
-_(foo).valueForKeyPath("bar.name"); // --> "Cool!"
+_(foo).valueForKeyPath("bar.name");           // --> "Cool!"
 _(foo).setValueForKeyPath("bar.name", "BAR"); // --> sets foo.bar.name as "BAR"
-_(foo).valueForKeyPath("scores.@max"); // --> 100
+_(foo).valueForKeyPath("scores.@max");        // --> 100
 ```
 
 ## more?
@@ -62,8 +62,8 @@ var list = [{
   }
 }];
 
-_(list).pluckByKeyPath("info.age"); // --> [20, 17, 34]
-_(list).sortByKeyPath("info.age"); // --> [{name:"bar", ..}, {name:"foo", ..}, {name:"zar", ..}]
+_(list).pluckByKeyPath("info.age");           // --> [20, 17, 34]
+_(list).sortByKeyPath("info.age");            // --> [{name:"bar", ..}, {name:"foo", ..}, {name:"zar", ..}]
 _(list).groupByKeyPath("info.favoriteColor"); // --> {red:2, green:1}
 
 ```
