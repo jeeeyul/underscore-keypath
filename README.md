@@ -8,15 +8,21 @@ object extensions for underscore
 $ npm install underscore-obj
 ```
 
+
+
 ```javascript
 var _ = require("underscore-obj");
 ```
 
-or
+or you may want to use origianl underscore:
 
 ```javascript
 var _ = require("underscore");
 require("underscore-obj");
+```
+in this case, please install "underscore" first.
+```bash
+$ npm install underscore underscore-obj
 ```
 
 ## Extensions for Object
