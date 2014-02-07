@@ -35,4 +35,4 @@ var foo = {
 _(foo).valueForKeyPath("bar.name"); // --> "Cool!"
 ```
 
-see [API](https://github.com/jeeeyul/underscore-keypath/wiki/API) Document
+see [API Document](https://github.com/jeeeyul/underscore-keypath/wiki)
