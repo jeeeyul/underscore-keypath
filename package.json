@@ -29,7 +29,7 @@
 	},
 
 	"scripts" : {
-		"minify" : "uglifyjs lib/underscore-keypath.js -o lib/underscore-keypath.min.js --source-map lib/underscore-keypath.min.js.map -m",
+		"minify" : "cd lib\nuglifyjs underscore-keypath.js -o underscore-keypath.min.js --source-map underscore-keypath.min.js.map -m",
 		"test" : "mocha -R spec"
 	}
 }
