@@ -15,7 +15,9 @@
 	},
 
 	"keywords" : [
-		"underscore"
+		"underscore",
+		"objective-c",
+		"keypath"
 	],
 
 	"dependencies" : {
