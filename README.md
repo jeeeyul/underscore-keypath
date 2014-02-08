@@ -43,6 +43,7 @@ $ npm install underscore underscore-keypath
 ```bash
 $ bower install underscore-keypath
 ```
+Or just download [underscore-keypath.js](https://github.com/jeeeyul/underscore-keypath/tree/master/lib/underscore-keypath.js) manually.
 
 ## Examples
 ```javascript
