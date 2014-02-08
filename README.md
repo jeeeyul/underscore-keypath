@@ -10,7 +10,7 @@ key-path mechanism extensions for underscore (mixin).
 $ npm install underscore-keypath
 ```
 
-## How to use
+## How to use (Node JS)
 ```javascript
 var _ = require("underscore-keypath");
 ```
@@ -24,6 +24,11 @@ require("underscore-keypath"); // it will extend original underscore
 in this case, please install "underscore" first.
 ```bash
 $ npm install underscore underscore-keypath
+```
+
+## How to use (Front-End)
+```bash
+$ bower install underscore-keypath
 ```
 
 ## example
