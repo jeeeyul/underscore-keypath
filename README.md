@@ -6,11 +6,24 @@ key-path mechanism extensions for underscore (mixin).
 
 **underscore-keypath** let you access JavaScript objects and arrays with keypath easily.
 
+```javascript
+var foo = {
+  bar : {
+    name : "Cool!"
+  },
+  scores : [55, 27, 100, 33]
+};
+
+_(foo).valueForKeyPath("bar.name");           // --> "Cool!"
+_(foo).setValueForKeyPath("bar.name", "BAR"); // --> sets foo.bar.name as "BAR"
+_(foo).valueForKeyPath("scores.@max");        // --> 100
+```
+
+## How to use (Node JS)
 ```bash
 $ npm install underscore-keypath
 ```
 
-## How to use
 ```javascript
 var _ = require("underscore-keypath");
 ```
@@ -26,21 +39,13 @@ in this case, please install "underscore" first.
 $ npm install underscore underscore-keypath
 ```
 
-## example
-```javascript
-var foo = {
-  bar : {
-    name : "Cool!"
-  },
-  scores : [55, 27, 100, 33]
-};
-
-_(foo).valueForKeyPath("bar.name");           // --> "Cool!"
-_(foo).setValueForKeyPath("bar.name", "BAR"); // --> sets foo.bar.name as "BAR"
-_(foo).valueForKeyPath("scores.@max");        // --> 100
+## How to use (Front-End)
+```bash
+$ bower install underscore-keypath
 ```
+Or just download [underscore-keypath.js](https://github.com/jeeeyul/underscore-keypath/tree/master/lib/underscore-keypath.js) manually.
 
-## more?
+## Examples
 ```javascript
 var list = [{
   name : "foo",
