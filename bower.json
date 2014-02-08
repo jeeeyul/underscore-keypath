@@ -12,7 +12,7 @@
 	],
 	"license": "MIT",
 	"dependencies" : {
-		"underscore" : "1.0.0~"
+		"underscore" : "1.5.2"
 	},
 	"ignore": [
 		"**/.*",
