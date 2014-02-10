@@ -19,7 +19,8 @@ _(foo).setValueForKeyPath("bar.name", "BAR"); // --> sets foo.bar.name as "BAR"
 _(foo).valueForKeyPath("scores.@max");        // --> 100
 ```
 
-## How to use (Node JS)
+## How to use
+### NodeJS
 ```bash
 $ npm install underscore-keypath
 ```
@@ -38,8 +39,12 @@ in this case, please install "underscore" first.
 ```bash
 $ npm install underscore underscore-keypath
 ```
+### Meteor
+```bash
+$ mrt add underscore-keypath
+```
 
-## How to use (Front-End)
+### Front-end
 ```bash
 $ bower install underscore-keypath
 ```
