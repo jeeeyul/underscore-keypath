@@ -37,8 +37,11 @@ require("underscore-keypath"); // it will extend original underscore
 ```
 in this case, please install "underscore" first.
 ```bash
-$ npm install underscore underscore-keypath
+$ npm install underscore 
+$ npm install underscore-keypath
 ```
+Otherwise, underscore-keypath extends separated underscore in sandbox.
+
 ### Meteor
 ```bash
 $ mrt add underscore-keypath
