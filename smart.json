@@ -1,10 +1,9 @@
 {
-	"name" : "underscore-keypath",
-	"description" : "keypath mechanism for underscore",
-	"homepage" : "https://github.com/jeeeyul/underscore-keypath",
-	"author" : "Jeeeyul Lee <jeeeyul@gmail.com>",
-	"version" : "0.0.9",
-	"git" : "https://github.com/jeeeyul/underscore-keypath.git",
-	"packages" : {}
+  "name": "underscore-keypath",
+  "description": "keypath mechanism for underscore",
+  "homepage": "https://github.com/jeeeyul/underscore-keypath",
+  "author": "Jeeeyul Lee <jeeeyul@gmail.com>",
+  "version": "0.0.9",
+  "git": "https://github.com/jeeeyul/underscore-keypath.git",
+  "packages": {}
 }
-
