@@ -19,7 +19,7 @@ _(foo).setValueForKeyPath("bar.name", "BAR"); // --> sets foo.bar.name as "BAR"
 _(foo).valueForKeyPath("scores.@max");        // --> 100
 ```
 
-## How to use
+## Install
 ### NodeJS
 ```bash
 $ npm install underscore-keypath
