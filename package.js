@@ -1,4 +1,6 @@
-Package.describe("Keypath mechanism for underscore");
+Package.describe({
+	summary : "Keypath mechanism for underscore"
+});
 
 Package.on_use(function(api, where){
 	api.use("underscore", ["server", "client"]);
