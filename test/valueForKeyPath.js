@@ -64,12 +64,12 @@ describe("valueForKeyPath", function(){
 	describe("plain property", function(){
 		it("valueForKeyPath returns value of given keypath", function(){
 			_(fixture).valueForKeyPath("foo.data")
-				.should.be.exactly("sample data");
+				.should.be.exactly(fixture.foo.data);
 		});	
 
 		it("keypath as an array", function(){
 			_(fixture).valueForKeyPath(["foo", "data"])
-				.should.be.exactly("sample data");
+				.should.be.exactly(fixture.foo.data);
 		});
 	});
 
