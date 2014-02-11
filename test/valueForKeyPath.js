@@ -2,20 +2,28 @@ var _ = require("../lib/underscore-keypath");
 var assert = require("assert");
 var Person = require("./fixture").Person;
 
-var fixture = {
-	foo : new Person("aaa", 1),
-	bar : new Person("bar", 2)
-};
-
-fixture.foo.data = "sample data";
-fixture.count = function(){
-	return 2; 
-};
-
 describe("valueForKeyPath", function(){
+	var fixture;
+
+	before(function(){
+		fixture = {
+			foo : new Person("aaa", 1),
+			bar : new Person("bar", 2)
+		};
+
+		fixture.foo.data = "sample data";
+		fixture.count = function(){
+			return 2; 
+		};
+	});
+
 	describe("empty-keypath", function(){
 		it("what if keypath is empty, result must be current context", function(){
 			_(fixture).valueForKeyPath("").should.be.exactly(fixture);
+		});
+
+		it("key path as an empty array", function(){
+			_(fixture).valueForKeyPath([]).should.be.exactly(fixture);
 		});
 	});
 
@@ -30,6 +38,9 @@ describe("valueForKeyPath", function(){
 		it("what if property is function, it's result have to be returned.", function(){
 			_(fixture).valueForKeyPath("count").should.be.exactly(2);
 		});
+		it("key path as an array", function(){
+			_(fixture).valueForKeyPath(["count"]).should.be.exactly(2);
+		});
 	});
 
 	describe("getter", function(){
@@ -40,6 +51,14 @@ describe("valueForKeyPath", function(){
 			_(fixture).valueForKeyPath("foo.male")
 				.should.be.exactly(fixture.foo._male);
 		});
+
+		it("keypath as an array", function(){
+			_(fixture).valueForKeyPath(["foo", "name"])
+				.should.be.exactly(fixture.foo._name);
+
+			_(fixture).valueForKeyPath(["foo", "male"])
+				.should.be.exactly(fixture.foo._male);
+		});
 	});
 
 	describe("plain property", function(){
@@ -47,6 +66,11 @@ describe("valueForKeyPath", function(){
 			_(fixture).valueForKeyPath("foo.data")
 				.should.be.exactly("sample data");
 		});	
+
+		it("keypath as an array", function(){
+			_(fixture).valueForKeyPath(["foo", "data"])
+				.should.be.exactly("sample data");
+		});
 	});
 
 	describe("alias", function(){

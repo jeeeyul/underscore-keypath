@@ -3,15 +3,25 @@ var assert = require("assert");
 var should = require("should");
 var Person = require("./fixture.js").Person;
 
-var fixture = {
-	foo : new Person("foo", 1),
-	bar : new Person("bar", 2)
-};
-
 describe("setValueForKeyPath", function(){
+	var fixture;
+
+	before(function(){
+		fixture = {
+			foo : new Person("foo", 1),
+			bar : new Person("bar", 2)
+		};
+	});
+
 	describe("set plain property", function(){
 		it("plain property must be updated", function(){
 			_(fixture).setValueForKeyPath("foo.alias", "FOO")
+				.should.be.exactly("FOO");
+			fixture.foo.alias.should.be.exactly("FOO");
+		});
+
+		it("keypath as an array", function(){
+			_(fixture).setValueForKeyPath(["foo", "alias"], "FOO")
 				.should.be.exactly("FOO");
 			fixture.foo.alias.should.be.exactly("FOO");
 		});
@@ -23,7 +33,11 @@ describe("setValueForKeyPath", function(){
 				.should.be.exactly(99);
 			fixture.bar._age.should.be.exactly(99);
 		});
+
+		it("key path as an array", function(){
+			_(fixture).setValueForKeyPath(["bar", "age"], 99)
+				.should.be.exactly(99)
+			fixture.bar._age.should.be.exactly(99);
+		});
 	});
 });
-
-

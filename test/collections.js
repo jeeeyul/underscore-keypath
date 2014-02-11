@@ -3,28 +3,32 @@ var assert = require("assert");
 var should = require("should");
 var Person = require("./fixture").Person;
 
-var fixture = [
-	new Person("foo", 1, {
-		company : {
-			name : "AAA",
-			since : 1995
-		}
-	}),
-	new Person("bar", 2, {
-		company : {
-			name : "BBB",
-			since : 1990
-		}
-	}),
-	new Person("zar", 3, {
-		company : {
-			name : "AAA",
-			since : 1998
-		}
-	})
-];
-
 describe("collection", function(){
+	var fixture;
+
+	before(function(){
+		fixture = [
+			new Person("foo", 1, {
+				company : {
+					name : "AAA",
+					since : 1995
+				}
+			}),
+			new Person("bar", 2, {
+				company : {
+					name : "BBB",
+					since : 1990
+				}
+			}),
+			new Person("zar", 3, {
+				company : {
+					name : "AAA",
+					since : 1998
+				}
+			})
+		];
+	});
+
 	describe("pluckByKeyPath", function(){
 		it("pluckByKeyPath should have to pluck by keypath mechanism", function(){
 			_(fixture).pluckByKeyPath("name")
