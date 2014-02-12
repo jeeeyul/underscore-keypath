@@ -1,3 +1,3 @@
-if(typeof Package !== "undefined"){
+if (typeof Package !== "undefined") {
 	_ = this._;
 }

@@ -1,4 +1,4 @@
-module.exports = function(grunt){
+module.exports = function (grunt) {
 	grunt.initConfig({
 		mochaTest: {
 			testCases : ["test/*.js"],
@@ -8,13 +8,16 @@ module.exports = function(grunt){
 		},
 
 		jshint : {
+			options: {
+				jshintrc : ".jshintrc"
+			},
 			source : ["lib/underscore-keypath.js", "*.js", "test/*.js"]
 		},
 
 		uglify: {
 			options: {
 				sourceMap : true,
-				sourceMapName : function (path){
+				sourceMapName : function (path) {
 					return path + ".map";
 				}
 			},
