@@ -33,5 +33,5 @@
 
 	"scripts" : {
 		"minify" : "cd lib\nuglifyjs underscore-keypath.js -o underscore-keypath.min.js --source-map underscore-keypath.min.js.map -m",
-		"test" : "jshint lib/underscore-keypath.js\nmocha -R spec" }
+		"test" : "mocha -R spec" }
 }
