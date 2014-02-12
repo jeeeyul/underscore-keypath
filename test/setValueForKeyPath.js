@@ -36,7 +36,7 @@ describe("setValueForKeyPath", function(){
 
 		it("key path as an array", function(){
 			_(fixture).setValueForKeyPath(["bar", "age"], 99)
-				.should.be.exactly(99)
+				.should.be.exactly(99);
 			fixture.bar._age.should.be.exactly(99);
 		});
 	});

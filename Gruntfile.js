@@ -8,7 +8,7 @@ module.exports = function(grunt){
 		},
 
 		jshint : {
-			source : ["lib/underscore-keypath.js"]
+			source : ["lib/underscore-keypath.js", "test/*.js"]
 		},
 
 		uglify: {

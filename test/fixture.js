@@ -5,14 +5,15 @@ function Person(name, age, options){
 	this._age = age;
 	this._male = true;
 	this.options = _.extend({}, options);
-};
+}
 
 Person.prototype.getName = function(){
 	return this._name;
 };
 
 Person.prototype.setName = function(newName){
-	return this._name = newName;
+	this._name = newName;
+	return newName;
 };
 
 Person.prototype.getAge = function(){
@@ -20,7 +21,8 @@ Person.prototype.getAge = function(){
 };
 
 Person.prototype.setAge = function(newAge){
-	return this._age = newAge;
+	this._age = newAge;
+	return newAge;
 };
 
 Person.prototype.isMale = function(){
@@ -28,7 +30,8 @@ Person.prototype.isMale = function(){
 };
 
 Person.prototype.setMail = function(newMale){
-	return this._male = newMale;
+	this._male = newMale;
+	return newMale;
 };
 
 exports.Person = Person;

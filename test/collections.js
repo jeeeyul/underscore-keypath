@@ -100,18 +100,20 @@ describe("collection", function(){
 		});
 
 		it("countByKeyPath", function(){
+			/* jshint sub:true */
 			var countMap = _(fixture).countByKeyPath("options.company.name");
-
 			countMap["AAA"].should.be.exactly(2);
 			countMap["BBB"].should.be.exactly(1);
 		});
 
 		it("indexByKeyPath", function(){
+			/* jshint sub:true */
 			var index = _(fixture).indexByKeyPath("options.company.name");
 			index["BBB"].should.be.exactly(fixture[1]);
 		});
 
 		it("groupByKeyPath", function(){
+			/* jshint sub:true */
 			var group = _(fixture).groupByKeyPath("options.company.name");
 			group["AAA"].should.be.an.Array
 				.and.have.lengthOf(2);
