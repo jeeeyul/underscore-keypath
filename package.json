@@ -27,11 +27,11 @@
 	"devDependencies" : {
 		"mocha" : "1.0.x",
 		"should" : "3.1.2",
-		"uglify-js" : "2.4.x"
+		"uglify-js" : "2.4.x",
+		"jslint" : "0.2.5"
 	},
 
 	"scripts" : {
 		"minify" : "cd lib\nuglifyjs underscore-keypath.js -o underscore-keypath.min.js --source-map underscore-keypath.min.js.map -m",
-		"test" : "mocha -R spec"
-	}
+		"test" : "jshint lib/underscore-keypath.js\nmocha -R spec" }
 }
