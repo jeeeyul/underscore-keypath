@@ -8,13 +8,14 @@ module.exports = function(grunt){
 		},
 
 		jshint : {
-			source : ["lib/underscore-keypath.js", "test/*.js"]
+			source : ["lib/underscore-keypath.js", "lib/export-underscore-keypath.j", "test/*.js"]
 		},
 
 		uglify: {
 			options: {
-				sourceMap : function(filename){
-					return filename + ".map";
+				sourceMap : true,
+				sourceMapName : function (path){
+					return path + ".map";
 				}
 			},
 			main : {
