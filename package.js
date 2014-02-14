@@ -2,7 +2,7 @@ Package.describe({
 	summary : "Keypath mechanism for underscore"
 });
 
-Package.on_use(function(api) {
+Package.on_use(function (api) {
 	api.use("underscore", ["server", "client"]);
 
 	api.add_files("lib/underscore-keypath.min.js", ["server", "client"]);
