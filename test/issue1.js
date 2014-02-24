@@ -30,7 +30,10 @@ describe("issue1", function () {
 	});
 
 	it("bracket and function notation", function () {
-		_(fixture).valueForKeyPath('bar["baz"].foo')
+		_(fixture).valueForKeyPath('bar()["baz"].foo')
 			.should.be.exactly("bar-baz-foo");
+		_(fixture).valueForKeyPath("bar()['baz'].foo")
+			.should.be.exactly("bar-baz-foo");
+
 	});
 });
