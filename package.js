@@ -1,5 +1,6 @@
 Package.describe({
-	summary : "Keypath mechanism for underscore"
+	summary : "Keypath mechanism for underscore",
+	git : "https://github.com/jeeeyul/underscore-keypath.git"
 });
 
 Package.on_use(function (api) {
