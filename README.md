@@ -43,7 +43,7 @@ Otherwise, underscore-keypath extends separated underscore in sandbox.
 
 ### Meteor
 ```bash
-$ mrt add underscore-keypath
+$ meteor add jeeeyul:underscore-keypath
 ```
 
 ### Front-end
