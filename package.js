@@ -5,7 +5,7 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-	api.use("underscore", ["server", "client"]);
+	api.use("underscore@1.0.0", ["server", "client"]);
 
 	api.add_files("lib/underscore-keypath.min.js", ["server", "client"]);
 	api.add_files("export-underscore-keypath.js", ["server", "client"]);
