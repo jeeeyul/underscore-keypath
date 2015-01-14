@@ -2,7 +2,7 @@
 var _ = require("../lib/underscore-keypath");
 require("should");
 
-describe("issue1", function () {
+describe("issue2", function () {
 	var foo = {
 		bar : {
 			id: 0,
