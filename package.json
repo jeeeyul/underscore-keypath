@@ -1,12 +1,12 @@
 {
 	"name" : "underscore-keypath",
-	
-	"version" : "0.0.16",
-	
+
+	"version" : "0.0.17",
+
 	"author" : "Jeeeyul Lee <jeeeyul@gmail.com>",
 
 	"description" : "Adds Key-Path mechanism extensions for underscore",
-	
+
 	"main" : "./lib/underscore-keypath.min.js",
 
 	"repository" : {
