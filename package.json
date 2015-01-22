@@ -33,7 +33,7 @@
 	},
 
 	"scripts" : {
-		"minify" : "grunt minify",
+		"install" : "grunt build",
 		"test" : "grunt"
 	}
 }
