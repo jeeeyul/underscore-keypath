@@ -15,6 +15,8 @@ describe("hasKeyPath", function () {
 	it("plain property", function () {
 		_(fixture).hasKeyPath("foo._name")
 			.should.be.exactly(true);
+		_(fixture).hasKeyPath(["foo", "_name"])
+			.should.be.exactly(true);
 		_(fixture).hasKeyPath("foo._not_exist_.more")
 			.should.be.exactly(false);
 	});

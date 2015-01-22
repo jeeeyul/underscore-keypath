@@ -36,7 +36,7 @@ require("underscore-keypath"); // it will extend original underscore
 ```
 in this case, please install "underscore" first.
 ```bash
-$ npm install underscore 
+$ npm install underscore
 $ npm install underscore-keypath
 ```
 Otherwise, underscore-keypath extends separated underscore in sandbox.
