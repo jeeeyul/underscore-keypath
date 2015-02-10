@@ -1,4 +1,6 @@
 # underscore-keypath
+
+[![Join the chat at https://gitter.im/jeeeyul/underscore-keypath](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jeeeyul/underscore-keypath?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/jeeeyul/underscore-keypath.png?branch=master)](https://travis-ci.org/jeeeyul/underscore-keypath)
 
 key-path mechanism extensions for underscore (mixin).
