@@ -32,7 +32,7 @@ describe("collection", function () {
 	describe("pluckByKeyPath", function () {
 		it("pluckByKeyPath should have to pluck by keypath mechanism", function () {
 			_(fixture).pluckByKeyPath("name")
-				.should.be.an.Array
+				.should.be.an.instanceOf(Array)
 				.and.containEql("foo")
 				.and.containEql("bar")
 				.and.containEql("zar")
@@ -44,7 +44,7 @@ describe("collection", function () {
 		it("whereByKeyPath should act as where with key-value mechanism", function () {
 			_(fixture).whereByKeyPath({
 				"options.company.name" : "AAA"
-			}).should.be.an.Array
+			}).should.be.an.instanceOf(Array)
 				.and.containEql(fixture[0])
 				.and.containEql(fixture[2])
 				.and.have.lengthOf(2);
@@ -53,7 +53,7 @@ describe("collection", function () {
 		it("findWhere should act as _.findWhere with key-value mechanism", function () {
 			_(fixture).findWhereByKeyPath({
 				"age" : 1
-			}).should.be.an.Object
+			}).should.be.an.instanceOf(Object)
 				.and.be.exactly(fixture[0]);
 		});
 	});
@@ -69,7 +69,7 @@ describe("collection", function () {
 				.pluckByKeyPath("age")
 				.valueForKeyPath("@max")
 				.value()
-					.should.be.an.Number
+					.should.be.an.instanceOf(Number)
 					.and.be.exactly(3);
 		});
 
@@ -115,9 +115,9 @@ describe("collection", function () {
 		it("groupByKeyPath", function () {
 			/* jshint sub:true */
 			var group = _(fixture).groupByKeyPath("options.company.name");
-			group["AAA"].should.be.an.Array
+			group["AAA"].should.be.an.instanceOf(Array)
 				.and.have.lengthOf(2);
-			group["BBB"].should.be.an.Array
+			group["BBB"].should.be.an.instanceOf(Array)
 				.and.have.lengthOf(1);
 		});
 	});
