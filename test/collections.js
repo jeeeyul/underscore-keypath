@@ -63,7 +63,7 @@ describe("collection", function () {
 			_(fixture).valueForKeyPath("@first.name")
 				.should.be.exactly("foo");
 		});
-		
+
 		it("@max", function () {
 			_.chain(fixture)
 				.pluckByKeyPath("age")
@@ -122,5 +122,3 @@ describe("collection", function () {
 		});
 	});
 });
-
-
