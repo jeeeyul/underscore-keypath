@@ -1,9 +1,9 @@
 {
 	"name" : "underscore-keypath",
-	"version" : "0.9.1",
+	"version" : "0.9.2",
 	"author" : "Jeeeyul Lee <jeeeyul@gmail.com>",
 	"description" : "Adds Key-Path mechanism extensions for underscore",
-	"main" : "./lib/underscore-keypath.min.js",
+	"main" : "./lib/underscore-keypath.js",
 
 	"repository" : {
 		"type" : "git",
