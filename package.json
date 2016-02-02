@@ -4,7 +4,7 @@
 	"author" : "Jeeeyul Lee <jeeeyul@gmail.com>",
 	"description" : "Adds Key-Path mechanism extensions for underscore",
 	"main" : "./lib/underscore-keypath.js",
-	"license" : "EPL",
+	"license" : "EPL-1.0",
 
 	"repository" : {
 		"type" : "git",
