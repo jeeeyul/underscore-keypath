@@ -40,4 +40,41 @@ describe("setValueForKeyPath", function () {
 			fixture.bar._age.should.be.exactly(99);
 		});
 	});
+
+  describe("set property when target missing", function () {
+		it("new path two deep must work", function () {
+			_(fixture).setValueForKeyPath("a.b", 2)
+				.should.be.exactly(2);
+			fixture.a.b.should.be.exactly(2);
+		});
+
+		it("new path three deep must work", function () {
+			_(fixture).setValueForKeyPath("c.d.e", 3)
+				.should.be.exactly(3);
+			fixture.c.d.e.should.be.exactly(3);
+		});
+
+		it("new path four deep must work", function () {
+			_(fixture).setValueForKeyPath("f.g.h.i", 4)
+				.should.be.exactly(4);
+			fixture.f.g.h.i.should.be.exactly(4);
+		});
+
+		it("new path three deep, down one must work", function () {
+			_(fixture).setValueForKeyPath("a.m.x", 5);
+			_(fixture).setValueForKeyPath("a.m.n.o", 5)
+				.should.be.exactly(5);
+			fixture.a.m.n.o.should.be.exactly(5);
+		});
+
+		it("new path three deep, down two must work", function () {
+			_(fixture).setValueForKeyPath("a.m.p.x", 5);
+			_(fixture).setValueForKeyPath("a.m.p.q.r", 6)
+				.should.be.exactly(6);
+			fixture.a.m.p.q.r.should.be.exactly(6);
+		});
+
+	});
+
+  
 });
